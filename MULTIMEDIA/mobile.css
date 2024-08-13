@@ -1,0 +1,291 @@
+/* Generalni styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    color: #4d7fe9 !important;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+header {
+    background-color: #282c34;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #61dafb;
+}
+
+/* Hero Section */
+#hero {
+    color: rgb(81, 83, 85);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+.cta-button {
+    background-color: #61dafb;
+    color: #282c34;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #21a1f1;
+    color: white;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#introduction {
+    text-align: center;
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Animacije */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header, section, .card {
+    opacity: 0;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+header {
+    animation-name: fadeInDown;
+}
+
+section {
+    animation-name: fadeInUp;
+}
+
+.card {
+    animation-name: fadeInUp;
+}
+
+/* Hover effect na programskim blokovima */
+.program {
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.program:hover {
+    transform: scale(1.05);
+}
+
+/* Style za download links */
+.download-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0073e6;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.download-link:hover {
+    color: #005bb5;
+}
+
+/* Slike programa */
+.inline-img-right {
+    float: right;
+    margin-left: 15px;
+    width: 80px;
+    height: auto;
+}
+
+/* SVE VAZNO ZA MOBILE DESIGN!!! */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 12px;
+    }
+
+    .inline-img-right {
+        float: none;
+        display: block;
+        margin: 0 auto 15px auto;
+        width: 100%;
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    #hero h2 {
+        font-size: 1.8em;
+    }
+
+    #hero p {
+        font-size: 0.9em;
+    }
+
+    .cta-button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 10px;
+    }
+}

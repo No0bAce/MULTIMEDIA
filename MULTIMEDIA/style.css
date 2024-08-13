@@ -1,0 +1,4 @@
+/* css preset ako je user na pc/laptop */
+@import url(defaults.css);
+/* css preset ako je user na mobile uređaju */
+@import url(mobile.css);
